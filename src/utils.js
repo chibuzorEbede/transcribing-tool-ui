@@ -1,4 +1,3 @@
-"use client";
-export function isMobile() {
-  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+export function isMobile(userAgent) {
+  return /android.+mobile|ip(hone|[oa]d)/i.test(userAgent);
 }
